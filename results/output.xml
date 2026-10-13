@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20240803 01:02:10.102" rpa="false" schemaversion="4">
+<suite id="s1" name="Astrum" source="C:\Users\Vale\Documents\Vale\Work\Software\Robot\Astrum">
+<suite id="s1-s1" name="Sismep 2.0" source="C:\Users\Vale\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0">
+<suite id="s1-s1-s1" name="Monitoreo" source="C:\Users\Vale\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Monitoreo">
+<suite id="s1-s1-s1-s1" name="3. Zonas" source="C:\Users\Vale\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Monitoreo\3. Zonas">
+<suite id="s1-s1-s1-s1-s1" name="Zonas" source="C:\Users\Vale\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Monitoreo\3. Zonas\Zonas.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Zonas: TODAS" line="36">
+<kw name="Iniciar sesion" library="Recursos.Generales">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240803 01:02:10.361" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20240803 01:02:10.360" endtime="20240803 01:02:13.128"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240803 01:02:13.128" endtime="20240803 01:02:13.156"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="Usuario"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240803 01:02:18.430" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240803 01:02:18.431" level="FAIL">Element 'xpath=//*[@id="Usuario"]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240803 01:02:13.156" endtime="20240803 01:02:18.434"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="Password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.434" endtime="20240803 01:02:18.434"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=Usuario</arg>
+<arg>${credenciales}[usuario]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.435" endtime="20240803 01:02:18.435"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=Password</arg>
+<arg>${credenciales}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.435" endtime="20240803 01:02:18.435"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.436" endtime="20240803 01:02:18.436"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div/div[2]</arg>
+<arg>timeout=90</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.436" endtime="20240803 01:02:18.436"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="alertasChart"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.437" endtime="20240803 01:02:18.437"/>
+</kw>
+<status status="FAIL" starttime="20240803 01:02:10.359" endtime="20240803 01:02:18.437"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.438" endtime="20240803 01:02:18.438"/>
+</kw>
+<kw name="Ingresar a opcion Monitoreo" library="Recursos.Generales">
+<status status="NOT RUN" starttime="20240803 01:02:18.438" endtime="20240803 01:02:18.439"/>
+</kw>
+<kw name="Presionar opcion Zonas">
+<status status="NOT RUN" starttime="20240803 01:02:18.439" endtime="20240803 01:02:18.439"/>
+</kw>
+<kw name="Presionar la opcion: ${TODAS}" sourcename="Presionar la opcion: ${tipozona}">
+<status status="NOT RUN" starttime="20240803 01:02:18.440" endtime="20240803 01:02:18.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240803 01:02:18.440" endtime="20240803 01:02:18.441"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240803 01:02:18.441" endtime="20240803 01:02:20.596"/>
+</kw>
+<doc>Valida que se muestren correctamente todas las zonas pintadas en el mapa.</doc>
+<tag>Zonas: TODAS - T428</tag>
+<status status="FAIL" starttime="20240803 01:02:10.359" endtime="20240803 01:02:20.597">Element 'xpath=//*[@id="Usuario"]' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240803 01:02:10.148" endtime="20240803 01:02:20.601"/>
+</suite>
+<status status="FAIL" starttime="20240803 01:02:10.142" endtime="20240803 01:02:20.604"/>
+</suite>
+<status status="FAIL" starttime="20240803 01:02:10.138" endtime="20240803 01:02:20.607"/>
+</suite>
+<status status="FAIL" starttime="20240803 01:02:10.133" endtime="20240803 01:02:20.609"/>
+</suite>
+<status status="FAIL" starttime="20240803 01:02:10.107" endtime="20240803 01:02:20.611"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Zonas: TODAS - T428</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Astrum">Astrum</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Sismep 2.0">Astrum.Sismep 2.0</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Monitoreo">Astrum.Sismep 2.0.Monitoreo</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="3. Zonas">Astrum.Sismep 2.0.Monitoreo.3. Zonas</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Zonas">Astrum.Sismep 2.0.Monitoreo.3. Zonas.Zonas</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

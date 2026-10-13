@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.12 on win32)" generated="20231001 14:52:00.313" rpa="false" schemaversion="3">
+<suite id="s1" name="Busqueda - Menu contextual clic derecho" source="c:\Users\Gabriela\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Monitoreo\2. Buscar Vehiculo\Busqueda - Menu contextual clic derecho.robot">
+<test id="s1-t1" name="Validar etiquetas - Menu contextual (clic derecho)" line="19">
+<kw name="Iniciar sesion" library="Recursos.Generales">
+<kw name="Open Browser">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<msg timestamp="20231001 14:52:00.455" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231001 14:52:00.455" endtime="20231001 14:52:00.458"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20231001 14:52:00.465" endtime="20231001 14:52:00.466"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>xpath=//*[@id="Usuario"]</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.473" endtime="20231001 14:52:00.473"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>xpath=//*[@id="Password"]</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.480" endtime="20231001 14:52:00.481"/>
+</kw>
+<kw name="Input Text">
+<arg>name=Usuario</arg>
+<arg>${credenciales}[usuario]</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.484" endtime="20231001 14:52:00.485"/>
+</kw>
+<kw name="Input Password">
+<arg>name=Password</arg>
+<arg>${credenciales}[password]</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.489" endtime="20231001 14:52:00.489"/>
+</kw>
+<kw name="Click Element">
+<arg>id=btnLogin</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.492" endtime="20231001 14:52:00.493"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible">
+<arg>xpath=/html/body/div[2]/div/div[2]</arg>
+<arg>timeout=90</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.497" endtime="20231001 14:52:00.497"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>xpath=//*[@id="alertasChart"]</arg>
+<status status="NOT RUN" starttime="20231001 14:52:00.504" endtime="20231001 14:52:00.504"/>
+</kw>
+<status status="FAIL" starttime="20231001 14:52:00.448" endtime="20231001 14:52:00.504"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231001 14:52:00.505" endtime="20231001 14:52:00.506"/>
+</kw>
+<kw name="Ingresar a opcion Monitoreo" library="Recursos.Generales">
+<status status="NOT RUN" starttime="20231001 14:52:00.506" endtime="20231001 14:52:00.507"/>
+</kw>
+<kw name="Presionar opcion Buscar Embarcacion" library="Recursos.Busqueda">
+<status status="NOT RUN" starttime="20231001 14:52:00.508" endtime="20231001 14:52:00.508"/>
+</kw>
+<kw name="Filtrar Embarcacion por Columna 1, Campo ${Embarcacion}[Nombre]" library="Recursos.Busqueda" sourcename="Filtrar Embarcacion por Columna ${COL}, Campo ${CAMPO}">
+<status status="NOT RUN" starttime="20231001 14:52:00.509" endtime="20231001 14:52:00.509"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231001 14:52:00.510" endtime="20231001 14:52:00.510"/>
+</kw>
+<kw name="Desplegar menu contextual de Embarcacion (clic derecho)">
+<status status="NOT RUN" starttime="20231001 14:52:00.511" endtime="20231001 14:52:00.511"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231001 14:52:00.512" endtime="20231001 14:52:00.512"/>
+</kw>
+<kw name="Validar etiquetas - Menu contextual (clic derecho)">
+<status status="NOT RUN" starttime="20231001 14:52:00.513" endtime="20231001 14:52:00.513"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20231001 14:52:00.520" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20231001 14:52:00.520" endtime="20231001 14:52:00.520">No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>Valida que se muestre correctamente escritas las etiquetas del Menu contextual.</doc>
+<tag>Validar etiquetas - Menu contextual (clic derecho)</tag>
+<status status="FAIL" starttime="20231001 14:52:00.446" endtime="20231001 14:52:00.521">No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20231001 14:52:00.320" endtime="20231001 14:52:00.525"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Validar etiquetas - Menu contextual (clic derecho)</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Busqueda - Menu contextual clic derecho">Busqueda - Menu contextual clic derecho</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231001 14:52:00.429" level="ERROR">Error in file 'c:\Users\Gabriela\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Recursos.Generales.robot' on line 6: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_debug_adapter
+  C:\Users\Gabriela\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\python310.zip
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\DLLs
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20231001 14:52:00.439" level="ERROR">Error in file 'c:\Users\Gabriela\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0\Recursos.Generales.robot' on line 7: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_debug_adapter
+  C:\Users\Gabriela\Documents\Vale\Work\Software\Robot\Astrum\Sismep 2.0
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src
+  c:\Users\Gabriela\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\python310.zip
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\DLLs
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\e4cd85f_b1f3c24_5d962d83\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
